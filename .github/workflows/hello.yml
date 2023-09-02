@@ -13,3 +13,18 @@ jobs:
       - name: say hello
         run: |
           echo "Hello World!"
+
+
+  display_date_job:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: display date
+        run: |
+          date
+
+  display_content_job:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: display content
+        run: |
+          ls -l
