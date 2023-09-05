@@ -1,4 +1,4 @@
-name: Hello World!
+name: Deployment pipeline
 
 on:
   push:
@@ -7,24 +7,14 @@ on:
 
 
 jobs:
-  hello_world_job:
+  simple_deployment_pipeline:
     runs-on: ubuntu-20.04
     steps:
-      - name: say hello
-        run: |
-          echo "Hello World!"
-
-
-  display_date_job:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: display date
-        run: |
-          date
-
-  display_content_job:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: display content
-        run: |
-          ls -l
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with: 
+          node-version: '16'
+      - name: Install dependencies
+        run: npm install
+      - name: Check style
+        run: npm run eslint
