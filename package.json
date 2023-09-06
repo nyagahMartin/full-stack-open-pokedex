@@ -9,7 +9,8 @@
     "test": "jest",
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
-    "test:e2e": "cypress run --headed"
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test start http-get://localhost:5001 cy:run"
   },
   "repository": {
     "type": "git",
@@ -41,6 +42,7 @@
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "jest": "^25.5.4",
+    "start-server-and-test": "^2.0.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
