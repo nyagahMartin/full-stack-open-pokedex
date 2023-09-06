@@ -9,7 +9,7 @@
     "test": "jest",
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
-    "cy:run": "cypress run",
+    "cy:run": "cypress run --headed",
     "test:e2e": "start-server-and-test start-prod http://localhost:5001 cy:run"
   },
   "repository": {
