@@ -10,7 +10,7 @@
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
     "cy:run": "cypress run",
-    "test:e2e": "start-server-and-test start-prod http-get://localhost:5001 cy:run"
+    "test:e2e": "start-server-and-test start-prod http-get://localhost:5001 cy:run "
   },
   "repository": {
     "type": "git",
