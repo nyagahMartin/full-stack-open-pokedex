@@ -26,8 +26,6 @@ jobs:
           NODE_OPTIONS: "--max_old_space_size=4096"
           CYPRESS_ENV: github_action
         with:
-          start: npm run start-prod
           command: npm run test:e2e
+          start: npm run start-prod
           wait-on: http://localhost:5000
-          wait-on-timeout: 180
-          browser: chrome
