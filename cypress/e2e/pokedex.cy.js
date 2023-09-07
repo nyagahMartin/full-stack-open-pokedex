@@ -7,10 +7,11 @@ describe('Pokedex', function() {
   })
 })
 
-describe('Pokedex', function() {
+describe('Navigate', function() {
   it('pokemon page can be navigated to', function() {
-    cy.visit('http://localhost:5000/pokemon/ivysaur')
-    cy.contains('Chlorophyll')
+    cy.visit('http://localhost:5000')
+    cy.contains('ivysaur').click()
+    cy.contains('chlorophyll')
     cy.contains('Pokémon and Pokémon character names are trademarks of Nintendo.')
   })
 })
