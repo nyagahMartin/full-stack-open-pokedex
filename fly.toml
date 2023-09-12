@@ -16,10 +16,7 @@ primary_region = "jnb"
   [build.args]
     NODE_VERSION = "16.19.1"
 
-[http_service]
-  internal_port = 3000
-  force_https = true
-  auto_stop_machines = true
-  auto_start_machines = true
-  min_machines_running = 0
+[[services]]
+  http_checks = []
+  internal_port = 8080
   processes = ["app"]
