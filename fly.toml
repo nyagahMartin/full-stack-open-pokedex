@@ -1,14 +1,25 @@
-[deploy]
-    release_command = "npm run build"
+# fly.toml app configuration file generated for twilight-haze-7938 on 2023-09-12T09:03:12+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-[process]
-    app = "node app.js"
-    [[services]]
-        http_checks = []
-        internal_port = 8080
-        processes = ["app"]
-    
+app = "twilight-haze-7938"
+primary_region = "jnb"
+
+[deploy]
+  release_command = "npm run build"
+
+[processes]
+  app = "node app.js"
 
 [build]
-    [build.args]
-        NODE_VERSION = "16.19.1"
+  [build.args]
+    NODE_VERSION = "16.19.1"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
