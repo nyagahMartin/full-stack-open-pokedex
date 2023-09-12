@@ -24,8 +24,4 @@ primary_region = "jnb"
   min_machines_running = 0
   processes = ["app"]
 
-[[services]]
-  http_checks = []
-  internal_port = 8080
-  processes = ["app"]
 
