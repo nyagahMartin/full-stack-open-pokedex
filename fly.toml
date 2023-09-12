@@ -3,6 +3,11 @@
 
 [process]
     app = "node app.js"
+    [[services]]
+        http_checks = []
+        internal_port = 8080
+        processes = ["app"]
+    
 
 [build]
     [build.args]
